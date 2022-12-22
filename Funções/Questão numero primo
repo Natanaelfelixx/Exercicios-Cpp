@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+bool isPrime(unsigned int n){ // Funcao booleana retornando dois valores possiveis para retratar se o numero eh primo ou nao
+    for(short d = 2 ; d <= n/2; ++d){
+        if(n % d == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+int main(){
+    int x;
+    cout << "Entre com x: " << endl;
+    cin >> x;
+    
+    if(isPrime(x) == true){
+        cout << "O numero " << x << " eh primo" << endl;
+    }else{
+        cout << "O numero " << x << " nao eh primo" << endl;
+    }
+    
+    return 0;
+}
