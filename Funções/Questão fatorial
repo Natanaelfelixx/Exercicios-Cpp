@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+long fat(unsigned short n){
+    long f = 1;
+    while(n > 1){ //Enquanto n for maior que 1 realiza o que está escrito
+        f = f*n; // F inicializado no começo da funcao como igual a 1 depois multiplicado por ele mesmo e pelo n
+        n--; //Decrescendo o n para satisfazer o while
+    }
+    return f;
+}
+
+int main()
+{
+    unsigned short n;
+    
+    cout << "Digite o numero que deseja calcular o fatorial: " << endl;
+    cin >> n;
+    
+    if(n > 0){
+        cout << "O resultado do fatorial eh igual a: " << fat(n) << endl;
+    }
+    return 0;
+}
