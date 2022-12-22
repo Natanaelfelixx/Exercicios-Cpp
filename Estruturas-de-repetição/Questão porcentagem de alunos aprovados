@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float m = 0, M = 0, p1, p2, p3, n;
+    int i;
+    
+    cout << "Digite a quantidade de alunos na turma: " << endl;
+    cin >> n;
+    
+    for(i = 1; i <= n; ++i){
+        do{
+           cout << "Digite a media do " << i << " aluno" << endl;
+           cin >> M;
+           if(M < 0){
+               cout << "Media invalida, digite novamente." << endl;
+           }
+        }while(M <0);
+        if(M >= 7 && M <= 10){
+            p1++;
+        }
+        else if(M < 7 && M >= 4){
+            p2++;
+        }
+        else if(M >= 0 && M < 4){
+            p3++;
+        }
+    }
+    cout << "Porcentagem de alunos aprovados por media: " << p1 / n << endl << "Porcentagem de alunos que vao para a final: " << p2 / n << endl << "Porcentagem de alunos reprovados por nota: " << p3 / n << endl;
+    return 0;
+}

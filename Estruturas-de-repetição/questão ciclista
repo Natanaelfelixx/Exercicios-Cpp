@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float A = 10, B = 15, pista = 2000, posicaoA{0}, posicaoB{2000}, i = 0;
+    
+    while(posicaoA != posicaoB){
+        posicaoB = posicaoB - B;
+        posicaoA = posicaoA + A;
+        i++;
+    }
+    
+    cout << "Eles se encontram em: " << i << " segundos." << endl;
+    cout << "Ciclista A percorreu: " << i*A << " metros." << endl;
+    cout << "Ciclista B percorreu: " << i*B << " metros." << endl;
+    return 0;
+}

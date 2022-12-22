@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main(){
+    int x, i, numhomem = 0, nummulher = 0;
+    float h, media = 0, somahm = 0, maioraltura = 0, menoraltura = 0;
+    char sexo;
+    
+    cout << "Digite a quantidade de alunos: " << endl;
+    cin >> x;
+    
+    for(i = 0; i < x; i++){
+        cout << "Digite o sexo e a altura do aluno " << i << endl;
+        cin >> h >> sexo;
+        if(strcasecmp(sexo, "Feminino") == 0){
+            nummulher++;
+            somahm = h+somahm;
+            media = somahm/nummulher;
+        }
+        else if(strcasecmp(sexo, "Masculino") == 0){
+            numhomem++;
+        }
+        if(h > maioraltura){
+            maioraltura = h;
+            menoraltura = maioraltura;
+        }
+        else if(h < menoraltura){
+            menoraltura = h;
+        }
+        
+    }
+    cout << "Maior altura = " << maioraltura << ", Menor altura = " << menoraltura << ", Media das mulheres = " << media << "Numero de homens = " << numhomem
+    
+    return 0;
+}

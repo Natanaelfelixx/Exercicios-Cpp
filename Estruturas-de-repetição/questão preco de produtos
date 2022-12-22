@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const short N = 6;
+    float preco, p1{0}, p2{0}, p3{0};
+    for(short n = 1; n <= N; ++n){
+        do{
+           cout << "Digite o preco do protudo" << n << ":" << endl;
+           cin >> preco;
+           if(preco <= 0){
+               cout << "preco invalido, digite novamente" << endl;
+           }
+        }while(preco <=0);
+        if(preco < 50){
+            p1++;
+        } else if(preco <=1000){
+            p2++;
+        } else{
+            p3++;
+        }
+        ++n;
+    }
+    cout << "% de produtos baratos " << p1/N*100 << endl;
+    cout << "% de produtos acessiveis " << p1/N*100 << endl;
+    cout << "% de produtos caros " << p1/N*100 << endl;
+    return 0;
+}
