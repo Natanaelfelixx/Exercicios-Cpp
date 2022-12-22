@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int A, B, C;
+    for(A=1; A < 500, ++A){
+        for(B=1; B < 500, ++B){
+            for(C=1; C < 500, ++C){
+                if(A*A == B*B + C*C || B*B == A*A + C*C || C*C == A*A + B*B){
+                    cout << A << " " << B << " " << C << endl;
+                }
+            }
+        }
+    }
+    
+    return 0;
+}
