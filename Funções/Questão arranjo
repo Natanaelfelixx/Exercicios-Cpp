@@ -1,0 +1,26 @@
+long fat( unsigned short n){
+    long f = 1;
+    while(n > 1){ //Enquanto n for maior que 1 realiza o que está escrito
+        f = f*n; // F inicializado no começo da funcao como igual a 1 depois multiplicado por ele mesmo e pelo n
+        n--; //Decrescendo o n para satisfazer o while
+    }
+    return f;
+}
+
+short combinacao(unsigned short n, unsigned short p){
+    return (fat(n))/(fat(p)*(fat(n-p)));
+}
+
+int main(){
+    unsigned short n, p;
+    cout << "entre com n:" << endl;
+    cin >> n;
+    cout << "entre com p: " << endl;
+    cin >> p;
+    
+    if(n > 0 && p > 0 && p <=n){
+        cout << "Combinacao de (" << n << ", " << p << ") " << "Resulta em: " << combinacao(n,p) << " combinacoes" << endl; 
+    }
+    
+    return 0;
+}
