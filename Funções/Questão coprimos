@@ -1,0 +1,26 @@
+#include <algorithm>
+#include <iostream>
+using namespace std;
+
+bool coprime(short a, short b){
+    for(short i = 2; i <= min(a, b); ++i){
+        if(a % i == 0 && b % i == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+int main(){
+    int a, b;
+    cout << "Entre com a e b: " << endl;
+    cin >> a >> b;
+    
+    if(coprime(a, b) == true){
+        cout << "Os numeros " << a << " e " << b << " sao coprimos" << endl;
+    }else{
+        cout << "Os numeros " << a << " e " << b << " nao sao coprimos" << endl;
+    }
+    
+    return 0;
+}
